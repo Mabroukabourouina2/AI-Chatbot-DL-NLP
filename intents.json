@@ -1,83 +1,91 @@
 {
   "intents": [
     {
-      "tag": "greeting",
+      "tag": "verification_code",
       "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
+        "Why didn’t I receive the verification code on my mobile phone?",
+        "I didn’t get my verification code.",
+        "I am not receiving the verification code."
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "There are multiple reasons preventing the code from being received on your mobile phone, here are some possibilities:\n• The text message inbox is full.\n• The phone is set to block messages from unknown senders.\n• The phone carrier is blocking the message."
       ]
     },
     {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "tag": "docusign_issue",
+      "patterns": [
+        "I’m stuck on the Docusign step, I can’t sign the documents.",
+        "I cannot sign the Docusign documents.",
+        "Docusign is not working for me."
+      ],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "If the Docusign exceeds 120 days, it will be automatically voided. Please contact technical support to fix it."
       ]
     },
     {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
+      "tag": "password_requirements",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "What are the password requirements?",
+        "Can you tell me the password rules?",
+        "What should my password include?"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        " Minimum 8 characters long.\n Maximum 25 characters long.\n It cannot be the same as your username.\n It cannot be an email address.\n Cannot start with a dot or a new line.\n It cannot have more than 3 numbers in a row.\n Cannot be the same as your prior 3 passwords.\n Must include at least one of each of the following character types:\n Uppercase letter.\n Lowercase letter.\n Number.\n Special character."
       ]
     },
     {
-      "tag": "payments",
+      "tag": "update_information",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "I need to update my information after signing the Docusign?",
+        "How can I update my information?",
+        "Can I change my info after Docusign?"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "Please contact the client service at: clientservices@cgdirect.ca."
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "account_locked",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "I’m blocked, I can’t login.",
+        "My account is locked.",
+        "I cannot log in to my account."
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "Usually, if you try multiple times with the wrong password, you will be automatically locked. Please contact client service to unlock your account."
       ]
     },
     {
-      "tag": "funny",
+      "tag": "admin_download_documents",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "I can’t download all documents; the button is disabled.",
+        "Download button is not available.",
+        "Why can’t I download documents?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "You need to sign the client documents sent to you by email."
+      ]
+    },
+    {
+      "tag": "admin_authorization_button",
+      "patterns": [
+        "The submit for authorization button disappeared.",
+        "Where is the authorization button?",
+        "I can’t find the submit button for authorization."
+      ],
+      "responses": [
+        "The client is active; you don’t need to submit the client for authorization."
+      ]
+    },
+    {
+      "tag": "admin_sign_documents",
+      "patterns": [
+        "I can’t sign the client documents.",
+        "How do I sign the client documents?",
+        "I am unable to sign the documents."
+      ],
+      "responses": [
+        "The Docusign has been voided. Please contact the CG support team for help."
       ]
     }
   ]

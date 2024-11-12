@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond du corps */
+    display: flex; /* Utilise flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.chatbox {
+    width: 400px; /* Largeur de la boîte de chat (réduite) */
+    border: 2px solid #a3d9a1; /* Bordure verte pistache */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #ffffff; /* Couleur de fond de la boîte de chat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.chatbox__header {
+    background-color: #a3d9a1; /* Vert pistache pour l'en-tête */
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white; /* Couleur du texte */
+}
+
+.chatbox__messages {
+    flex-grow: 1; /* Permet à la zone des messages de croître */
+    padding: 10px;
+    overflow-y: auto; /* Permet de faire défiler si le contenu déborde */
+    max-height: 800px; /* Hauteur maximale */
+    font-size: 14px; /* Taille de police pour les messages, ajustez à votre convenance */
+}
+
+.message {
+    padding: 3px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 10px; /* Espacement entre les messages */
+    max-width: 70%; /* Largeur maximale */
+}
+
+.user {
+    background-color: #d1e7dd; /* Couleur de fond pour le message utilisateur */
+    align-self: flex-end; /* Aligne les messages utilisateurs à droite */
+}
+
+.bot {
+    background-color: #a3d9a1; /* Couleur de fond pour le message du bot */
+    align-self: flex-start; /* Aligne les messages du bot à gauche */
+}
+
+.chatbox__footer {
+    display: flex; /* Utilise flexbox pour aligner l'input et le bouton */
+    padding: 10px; /* Espacement autour de la zone d'entrée */
+    border-top: 1px solid #a3d9a1; /* Bordure supérieure pour séparer le footer */
+}
+
+#userInput {
+    flex-grow: 1; /* Permet à l'input de croître */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #a3d9a1; /* Bordure verte pistache */
+    border-radius: 5px; /* Coins arrondis */
+    margin-right: 10px; /* Espacement à droite de l'input */
+    font-size: 14px; /* Taille de police pour l'input, ajustez à votre convenance */
+}
+
+#sendButton {
+    background-color: #a3d9a1; /* Couleur de fond verte pistache */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px 15px; /* Espacement interne */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s; /* Transition douce */
+}
+
+#sendButton:hover {
+    background-color: #8db89e; /* Couleur de fond au survol */
+}
+
+.avatar {
+    width: 30px; /* Largeur de l'avatar */
+    height: 30px; /* Hauteur de l'avatar */
+    border-radius: 50%; /* Avatar circulaire */
+    margin-right: 8px; /* Espacement à droite de l'avatar */
+}

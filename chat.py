@@ -4,7 +4,7 @@ import torch
 import requests
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
-import wikipedia
+import wikipediaapi
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -145,11 +145,11 @@ def get_response(msg):
     elif msg.startswith("!wiki"):
         search_query = msg[5:]  # Remove "wiki:" prefix from the message
         try:
-            page = wikipedia.page(wikipedia.search(search_query)[0])
+            page = wikipediaapi.page(wikipediaapi.search(search_query)[0])
             return page.summary
-        except wikipedia.exceptions.PageError:
+        except wikipediaapi.exceptions.PageError:
             return "Sorry, I couldn't find any Wikipedia page matching your query."
-        except wikipedia.exceptions.DisambiguationError as e:
+        except wikipediaapi.exceptions.DisambiguationError as e:
             options = e.options[:5]  # Limit the number of options shown
             return f"Your query is ambiguous. Here are some options:\n\n{', '.join(options)}"
         
